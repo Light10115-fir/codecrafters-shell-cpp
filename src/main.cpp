@@ -7,11 +7,19 @@ int main() {
   std::cerr << std::unitbuf;
 
   // Start REPL
-  int start = 1;
-  while (start < 2){
+  std::string command;
+  while (command != "exit"){
 	  std::cout << "$ ";
 	  std::string command;
 	  std::cin >> command;
-	  std::cout << command << ": command not found" << std::endl;
+	  if (command != "exit") {
+		  std::cout << command << ": command not found" << std::endl;
+	  }
+	  else {
+		  return 0;
+	  }
   }
+  /*else {
+	  exit(-1);
+  }*/
 } 
